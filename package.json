@@ -10,7 +10,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+"deploy": "gh-pages -d dist"
+git add .
+git commit -m "Updated portfolio"
+git push
+
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
