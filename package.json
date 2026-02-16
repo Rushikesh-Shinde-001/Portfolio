@@ -11,6 +11,11 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
 "deploy": "gh-pages -d dist"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7423b67 (Updated portfolio)
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
