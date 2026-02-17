@@ -7,6 +7,7 @@ const Projects = () => {
     title: "Online Voting System",
     description:
       "A secure and transparent online voting platform with authentication, admin dashboard, election management and real-time result system.",
+
     image:
       "https://static.vecteezy.com/system/resources/previews/010/942/363/non_2x/vote-voting-and-election-concept-on-virtual-screen-polling-ballot-online-elections-electronic-voting-technology-e-ballot-check-mark-closeup-finger-about-to-press-a-button-illustration-vector.jpg",
 
@@ -22,10 +23,8 @@ const Projects = () => {
     ],
 
     live: "https://online-voting-system-demo.netlify.app",
-
     github: "https://github.com/yourusername/online-voting-system",
-
-    linkedin: "https://www.linkedin.com/in/your-linkedin-profile/",
+    linkedin: "https://www.linkedin.com/in/rushikesh-shinde-4b350131b",
 
     highlights: [
       "User Authentication",
@@ -40,7 +39,10 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="min-h-screen py-20 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <section
+      id="projects"
+      className="min-h-screen py-20 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-black"
+    >
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
@@ -63,9 +65,10 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.5 }}
-          className="relative group"
+          className="relative group z-10"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-30 blur-2xl rounded-2xl transition duration-500"></div>
+          {/* Glow Effect */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-30 blur-2xl rounded-2xl transition duration-500"></div>
 
           <div className="relative backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl shadow-xl overflow-hidden">
 
@@ -77,6 +80,7 @@ const Projects = () => {
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.08 }}
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
 
               <div className="absolute bottom-6 left-6 right-6">
@@ -101,7 +105,10 @@ const Projects = () => {
 
                 <ul className="grid md:grid-cols-2 gap-2">
                   {project.highlights.map((item, i) => (
-                    <li key={i} className="text-gray-300 text-sm flex items-center gap-2">
+                    <li
+                      key={i}
+                      className="text-gray-300 text-sm flex items-center gap-2"
+                    >
                       <span className="w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
                       {item}
                     </li>
@@ -130,38 +137,29 @@ const Projects = () => {
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
 
-                {/* Live */}
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 text-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:scale-105 transition"
+                <button
+                  onClick={() => window.open(project.live, "_blank")}
+                  className="flex-1 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:scale-105 transition"
                 >
                   <FaExternalLinkAlt className="inline mr-2" />
                   Live Demo
-                </a>
+                </button>
 
-                {/* GitHub */}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 text-center px-6 py-3 rounded-xl border border-white/20 text-gray-300 hover:bg-white/10 transition"
+                <button
+                  onClick={() => window.open(project.github, "_blank")}
+                  className="flex-1 px-6 py-3 rounded-xl border border-white/20 text-gray-300 hover:bg-white/10 transition"
                 >
                   <FaGithub className="inline mr-2" />
                   GitHub
-                </a>
+                </button>
 
-                {/* LinkedIn */}
-                <a
-                  href={project.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 text-center px-6 py-3 rounded-xl border border-blue-500/40 text-blue-300 hover:bg-blue-500/10 transition"
+                <button
+                  onClick={() => window.open(project.linkedin, "_https://www.linkedin.com/in/rushikesh-shinde-4b350131b")}
+                  className="flex-1 px-6 py-3 rounded-xl border border-blue-500/40 text-blue-300 hover:bg-blue-500/10 transition"
                 >
                   <FaLinkedin className="inline mr-2" />
                   LinkedIn
-                </a>
+                </button>
 
               </div>
 

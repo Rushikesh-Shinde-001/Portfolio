@@ -57,8 +57,6 @@ const Header = () => {
       navigate(item.href)
     }
   }
-
-  // Header.jsx मधील navItems मध्ये Contact जोडा
 const navItems = [
   { label: 'Home', href: '/', sectionId: 'home', index: 0 },
   { label: 'Skills', href: '/', sectionId: 'skills', index: 1 },
@@ -360,7 +358,7 @@ const navItems = [
                       <div className="relative">
                         <div className="w-12 h-12 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
                           <img 
-                            src="1759214743532.jpg" 
+                             src="rs-monogram-wing-shape-style-logo-geometric-initial-design-template-isolated-black-background-240995305 (1).jpg" 
                             alt="Profile" 
                             className="w-full h-full object-cover"
                           />
